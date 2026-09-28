@@ -111,3 +111,10 @@ See [ASSIGNMENT.md](./ASSIGNMENT.md) for full submission requirements. At minimu
 - **Bug report** — what you found, where in the code, and why it's a bug (not just symptoms)
 - **At least one fix** — with a note on your approach
 - **`PATCH /tasks/:id/assign` implementation** — plus a short explanation of any design decisions (validation, edge cases, etc.)
+
+--- SUBMISSION NOTES ---
+What I'd test next if I had more time: Concurrent request/load testing and query parameter boundary cases (negative pagination values, non-string inputs for status/priority).
+
+What surprised me: The pagination logic skipped the first page due to an off-by-one calculation, and completeTask forced priority back to medium.
+
+Questions before shipping: Should data persist to a database with transactions? What auth/authz model controls task creation/assignment? Should assignee allow unassignment?"
